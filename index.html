@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christine Dominic - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  </head>
+  <body class="bg-white">
+    <nav id="desktop-nav" class="bg-white shadow-md reveal">
+      <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <div class="text-xl font-bold">christine dominic</div>
+        <div>
+          <ul class="flex space-x-4">
+            <li><a href="#about" class="hover:text-gray-700">about</a></li>
+            <li><a href="#experience" class="hover:text-gray-700">experience</a></li>
+            <li><a href="#projects" class="hover:text-gray-700">projects</a></li>
+            <li><a href="#contact" class="hover:text-gray-700">contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="profile" class="py-12 text-center reveal">
+      <div class="container mx-auto px-6">
+        <p class="text-lg text-gray-600 mb-2">hi, i'm</p>
+        <h1 class="text-4xl font-bold mb-4">christine dominic</h1>
+        <p class="text-xl text-gray-600 mb-8">student @ the university of texas at austin & aspiring swe</p>
+        <div class="flex justify-center space-x-4 mb-8">
+          <button class="bg-white text-black px-6 py-2 rounded-full shadow-md hover:bg-gray-200" onclick="window.open('./assets/resume-example.pdf')">
+            download my cv
+          </button>
+          <button class="bg-gray-800 text-white px-6 py-2 rounded-full shadow-md hover:bg-gray-900" onclick="location.href='./#contact'">
+            contact info
+          </button>
+        </div>
+        <div class="flex justify-center space-x-4">
+          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="w-8 h-8 cursor-pointer" onclick="location.href='https://www.linkedin.com/in/christine-dominic/'" />
+          <img src="./assets/github.png" alt="My Github profile" class="w-8 h-8 cursor-pointer" onclick="location.href='https://github.com/christinedom'" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-12 bg-white reveal">
+      <div id="about-me-root"></div>
+    </section>
+
+    <section id="experience" class="py-12 reveal">
+      <div class="container mx-auto px-6">
+        <p class="text-lg text-gray-600 mb-2 text-center">explore my</p>
+        <h1 class="text-4xl font-bold mb-12 text-center">experience</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-semibold mb-4">frontend development</h2>
+            <ul class="space-y-2">
+              <li class="flex items-center"><img src="./assets/checkmark.png" alt="Checkmark" class="w-5 h-5 mr-2" /> <span>html - experienced</span></li>
+              <li class="flex items-center"><img src="./assets/checkmark.png" alt="Checkmark" class="w-5 h-5 mr-2" /> <span>css - experienced</span></li>
+              <li class="flex items-center"><img src="./assets/checkmark.png" alt="Checkmark" class="w-5 h-5 mr-2" /> <span>react - intermediate</span></li>
+              <li class="flex items-center"><img src="./assets/checkmark.png" alt="Checkmark" class="w-5 h-5 mr-2" /> <span>javascript - intermediate</span></li>
+              <li class="flex items-center"><img src="./assets/checkmark.png" alt="Checkmark" class="w-5 h-5 mr-2" /> <span>mermaid.js - experienced</span></li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-semibold mb-4">backend development</h2>
+            <ul class="space-y-2">
+              <li class="flex items-center"><img src="./assets/checkmark.png" alt="Checkmark" class="w-5 h-5 mr-2" /> <span>java - experienced</span></li>
+              <li class="flex items-center"><img src="./assets/checkmark.png" alt="Checkmark" class="w-5 h-5 mr-2" /> <span>c - experienced</span></li>
+              <li class="flex items-center"><img src="./assets/checkmark.png" alt="Checkmark" class="w-5 h-5 mr-2" /> <span>python - intermediate</span></li>
+              <li class="flex items-center"><img src="./assets/checkmark.png" alt="Checkmark" class="w-5 h-5 mr-2" /> <span>rust - intermediate</span></li>
+              <li class="flex items-center"><img src="./assets/checkmark.png" alt="Checkmark" class="w-5 h-5 mr-2" /> <span>node.js - experienced</span></li>
+              <li class="flex items-center"><img src="./assets/checkmark.png" alt="Checkmark" class="w-5 h-5 mr-2" /> <span>sql - intermediate</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-12 bg-white reveal">
+      <div class="container mx-auto px-6">
+        <p class="text-lg text-gray-600 mb-2 text-center">browse my recent</p>
+        <h1 class="text-4xl font-bold mb-12 text-center">projects</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gray-100 rounded-lg shadow-md p-6">
+            <img src="./assets/project-1.png" alt="Project 1" class="w-full h-48 object-cover mb-4 rounded" />
+            <h2 class="text-xl font-semibold mb-4">project one: python chatbot (html & python)</h2>
+            <div class="flex space-x-4">
+              <button class="bg-white text-black px-4 py-2 rounded shadow hover:bg-gray-200" onclick="location.href='https://github.com/christinedom/Python-Chatbot'">
+                github
+              </button>
+            </div>
+          </div>
+          <div class="bg-gray-100 rounded-lg shadow-md p-6">
+            <img src="./assets/project-2.png" alt="Project 2" class="w-full h-48 object-cover mb-4 rounded" />
+            <h2 class="text-xl font-semibold mb-4">project two: task tracker (react)</h2>
+            <div class="flex space-x-4">
+              <button class="bg-white text-black px-4 py-2 rounded shadow hover:bg-gray-200" onclick="location.href='https://github.com/christinedom/Task-Tracker'">
+                github
+              </button>
+            </div>
+          </div>
+          <div class="bg-gray-100 rounded-lg shadow-md p-6">
+            <img src="./assets/project-3.png" alt="Project 3" class="w-full h-48 object-cover mb-4 rounded" />
+            <h2 class="text-xl font-semibold mb-4">project three: snake game (rust)</h2>
+            <div class="flex space-x-4">
+              <button class="bg-white text-black px-4 py-2 rounded shadow hover:bg-gray-200" onclick="location.href='https://github.com/christinedom/Snake-Game'">
+                github
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-12 reveal">
+      <div class="container mx-auto px-6">
+        <p class="text-lg text-gray-600 mb-2 text-center">let's keep in touch!</p>
+        <h1 class="text-4xl font-bold mb-12 text-center">contact me @</h1>
+        <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12">
+          <div class="flex items-center">
+            <img src="./assets/email.png" alt="Email icon" class="w-8 h-8 mr-4" />
+            <p><a href="mailto:christinedominic@utexas.edu" class="hover:text-gray-700">christinedominic@utexas.edu</a></p>
+          </div>
+          <div class="flex items-center">
+            <img src="./assets/linkedin.png" alt="LinkedIn icon" class="w-8 h-8 mr-4" />
+            <p><a href="https://www.linkedin.com/in/christine-dominic/" class="hover:text-gray-700">my linkedin</a></p>
+          </div>
+        </div>
+        <div class="mt-12 max-w-md mx-auto">
+          <form id="contact-form" class="space-y-4">
+            <div>
+              <label for="email" class="block text-gray-700">Email:</label>
+              <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded" required />
+            </div>
+            <div>
+              <label for="message" class="block text-gray-700">Message:</label>
+              <textarea id="message" name="message" rows="4" class="w-full p-2 border border-gray-300 rounded" required></textarea>
+            </div>
+            <button type="submit" class="bg-gray-800 text-white px-6 py-2 rounded-full shadow-md hover:bg-gray-900">Send</button>
+          </form>
+          <p id="form-message" class="mt-4 text-center text-gray-700"></p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-6 bg-gray-800 text-white text-center">
+      <p>&copy; 2024 Christine Dominic. All rights reserved.</p>
+    </footer>
+
+    <script type="text/babel">
+      // EmailJS configuration
+      (function() {
+        emailjs.init("user_HOL7I7quGyVHf8uyH"); 
+      })();
+
+      const AboutMeSection = () => {
+        const sections = [
+          {
+            title: 'experience',
+            items: ['7+ years of coding', 'pm & swe intern @ brand junkie', 'sell fellow', 'gs virtual insight series participant']
+          },
+          {
+            title: 'education',
+            items: ['canfield business & computer science honors', 'class of 2027']
+          },
+          {
+            title: 'awards/certications',
+            items: [
+              'future ceo award - presented by the houston business journal',
+              'ncwit aspirations in cs houston affiliate winner',
+              'acumatica certified'
+            ]
+          },
+          {
+            title: 'interests',
+            items: ['artificial intelligence', 'food waste & food insecurity', 'full stack development', 'the environment<3', 'entrepreneurship']
+          }
+        ];
+
+        return (
+          <div className="flex flex-col items-center w-full max-w-4xl mx-auto">
+            <p className="text-lg text-gray-600 mb-2">a little bit</p>
+            <h1 className="text-4xl font-bold mb-8">about me...</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+              {sections.map((section, index) => (
+                <div key={index} className="bg-gray-100 rounded-lg shadow-md p-6">
+                  <h2 className="text-xl font-semibold mb-4">{section.title}</h2>
+                  <ul className="list-disc pl-5">
+                    {section.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="text-sm text-gray-600 mb-1">{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      };
+
+      ReactDOM.render(<AboutMeSection />, document.getElementById('about-me-root'));
+
+      // Initialize ScrollReveal
+      ScrollReveal().reveal('.reveal', { 
+        delay: 200,
+        distance: '50px',
+        duration: 1000,
+        easing: 'ease-in-out',
+        origin: 'bottom'
+      });
+
+      // Handle form submission
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        emailjs.send('service_p7yck0p', 'template_u8vgyqj', {
+          email: email,
+          message: message
+        })
+        .then(function(response) {
+          document.getElementById('form-message').textContent = 'Message sent successfully!';
+          document.getElementById('contact-form').reset();
+        }, function(error) {
+          document.getElementById('form-message').textContent = 'Failed to send message. Please try again later.';
+        });
+      });
+    </script>
+  </body>
+</html>
